@@ -1,0 +1,54 @@
+@import '../../styles/main.scss';
+
+.select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  margin: 0 auto;
+  background-color: $beige;
+  @include from($ipad) {
+    width: 1024px;
+  }
+  @include from($vipad) {
+    width: 766px;
+  }
+  @include from($mobile) {
+    width: 319px;
+  }
+  &__select {
+    border: 2px solid gray;
+    border-radius: 4px;
+    height: 30px;
+    width: 250px;
+    margin-top: 20px;
+  }
+  &__text {
+    font-family: $montserrat;
+    font-size: 3rem;
+    margin: 40px 0px 20px 0px;
+    text-align: center;
+    color: $text-color;
+    @include from($mobile) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.rendered-info {
+  padding: 20px 0;
+  background-color: $green-light;
+  width: 1440px;
+  text-align: center;
+  &__item {
+    font-family: $montserrat;
+    font-size: 1.4rem;
+    color: $beige;
+    font-weight: 500;
+    padding: 5px 0;
+    &-detail {
+      padding: 3px 0;
+    }
+  } 
+}

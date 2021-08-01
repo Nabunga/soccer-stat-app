@@ -1,0 +1,18 @@
+@import '../../styles/main.scss';
+
+.teams {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: $green-light;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    font-family: $montserrat;
+    font-size: 3rem;
+    padding: 15px;
+  }
+}

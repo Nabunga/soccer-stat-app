@@ -1,0 +1,66 @@
+@import '../../styles/main.scss';
+
+.date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  min-height: 50px;
+  margin: 0 auto;
+  background-color: $light-orange;
+  @include from($ipad) {
+    width: 1024px;
+  }
+  @include from($vipad) {
+    width: 766px;
+  }
+  @include from($mobile) {
+    width: 319px;
+    flex-direction: column;
+  }
+  &__label {
+    font-family: $montserrat;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-right: 20px;
+    color: $text-color;
+    @include from($mobile) {
+      margin: 10px 0
+    }
+  }
+  &__input {
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin-right: 50px;
+    text-align: center;
+    @include from($mobile) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  min-height: 50px;
+  margin: 0 auto;
+  background-color: $dark-green;
+  color: $beige;
+  font-family: $montserrat;
+  font-weight: 500;
+  font-size: 1.6rem;
+  @include from($ipad) {
+    width: 1024px;
+  }
+  @include from($vipad) {
+    width: 766px;
+  }
+  @include from($mobile) {
+    width: 319px;
+    text-align: center;
+    line-height: 2rem;
+  }
+}

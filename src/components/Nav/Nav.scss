@@ -1,0 +1,61 @@
+@import '../../styles/main.scss';
+
+.header {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: $beige;
+  @include from($ipad) {
+    width: 1024px;
+  }
+  @include from($vipad) {
+    width: 766px;
+  }
+  @include from($mobile) {
+    width: 319px;
+  }
+  &__header {
+    font-family: $style-script;
+    font-size: 9rem;
+    text-align: center;
+    padding-top: 15px;
+    @include from($mobile) {
+      font-size: 7rem;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    width: 1440px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    @include from($ipad) {
+      width: 1024px;
+    }
+    @include from($vipad) {
+      width: 766px;
+    }
+    @include from($mobile) {
+      width: 319px;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+  }
+  &__link {
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $text-color;
+    @include from($mobile) {
+      padding: 5px 0;
+    }
+    &:hover {
+      color: $light-orange;
+      text-decoration: underline;
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+@import '../../styles/main.scss';
+
+.leagues {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: $green-light;
+  @include from($ipad) {
+    width: 1024px;
+  }
+  @include from($vipad) {
+    width: 766px;
+  }
+  @include from($mobile) {
+    width: 319px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    font-family: $montserrat;
+    font-size: 3rem;
+    padding: 15px;
+    @include from($ipad) {
+      font-size: 2.5rem;
+    }
+    @include from($vipad) {
+      font-size: 2rem;
+    }
+    @include from($mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  &__link {
+    color: $text-color;
+    &:hover {
+      color: $beige;
+      text-decoration: underline;
+    }
+  }
+}

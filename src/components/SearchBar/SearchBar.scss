@@ -1,0 +1,42 @@
+@import '../../styles/main.scss';
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  min-height: 50px;
+  margin: 0 auto;
+  background-color: $beige;
+  @include from($ipad) {
+    width: 1024px;
+  }
+  @include from($vipad) {
+    width: 766px;
+  }
+  @include from($mobile) {
+    width: 319px;
+    flex-direction: column;
+  }
+  &__label {
+    font-family: $montserrat;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-right: 20px;
+    color: $text-color;
+    @include from($mobile) {
+      padding-top: 10px;
+    }
+  }
+  &__input {
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin-right: 20px;
+    text-align: center;
+    height: 30px;
+    width: 250px;
+    @include from($mobile) {
+      margin-bottom: 10px;
+    }
+  }
+}

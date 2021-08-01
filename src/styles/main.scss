@@ -1,0 +1,24 @@
+//variables
+$beige: #FAF1E6;
+$light-orange: #FFC074;
+$green-light: #B6C867;
+$dark-green: #01937C;
+//text color
+$text-color: #5E5E5E;
+
+//fonts
+$montserrat: 'Montserrat', sans-serif;
+$style-script: 'Style script', cursive;
+
+// mixins
+@mixin from($pixels) {
+	@media screen and (max-width: $pixels+'px') {
+		@content;
+	}
+}
+
+//media queries
+$mobile: 320;
+$ipad: 1280;
+$laptop: 1440;
+$vipad: 768;
